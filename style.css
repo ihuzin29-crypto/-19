@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #07020d;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.card {
+  width: 380px;
+  height: 640px;
+  background: linear-gradient(160deg, #160426 0%, #090114 100%);
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-header {
+  padding: 24px 20px 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.card-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.stage {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.target-heart-wrap {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  z-index: 2;
+}
+
+.bow-wrap {
+  position: absolute;
+  bottom: 25px;
+  left: 35px;
+  width: 90px;
+  height: 135px;
+  z-index: 3;
+}
+
+.bow-wrap svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.arrow-wrap {
+  position: absolute;
+  top: 20px;
+  left: 28px;
+  width: 32px;
+  height: 80px;
+  transform-origin: bottom center;
+}
+
+.arrow-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cake-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.cake-graphic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* **ИЗМЕНЕНИЕ: Добавлен новый класс стилей специально для вашей фотографии** */
+.custom-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff758c;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.balloons {
+  position: absolute;
+  width: 220px;
+  height: 100px;
+  top: -45px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.balloon {
+  font-size: 38px;
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+.b1 { animation-delay: 0s; }
+.b2 { animation-delay: 0.6s; }
+.b3 { animation-delay: 1.2s; }
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(-5deg); }
+  100% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.greeting-title {
+  font-family: 'Brush Script MT', 'Dancing Script', cursive, sans-serif;
+  font-size: 46px;
+  background: linear-gradient(45deg, #ff9a9e, #fecfef, #feada6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+  text-align: center;
+  padding: 0 10px;
+}
+
+.heart-particle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.controls {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 65, 108, 0.6);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}

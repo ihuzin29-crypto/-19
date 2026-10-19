@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Birthday Surprise</h2>
+    </div>
+
+    <div class="stage" id="stage">
+
+      <div class="target-heart-wrap" id="targetHeart">
+        <svg viewBox="0 0 100 100">
+          <path d="M 50 30 C 20 -10, -20 50, 50 95 C 120 50, 80 -10, 50 30 Z"
+                fill="url(#heartGrad)"
+                filter="drop-shadow(0 0 12px rgba(255,105,180,0.6))"/>
+          <defs>
+            <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff758c"/>
+              <stop offset="100%" stop-color="#ff7eb3"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="bow-wrap" id="bowContainer">
+        <svg id="bowSvg" viewBox="0 0 120 180">
+          <path id="bowArc" d="M 60 10 Q 15 90 60 170" stroke="#ffd166" stroke-width="7" fill="none" stroke-linecap="round" />
+          <path id="bowString" d="M 60 10 L 60 90 L 60 170" stroke="#ffffff" stroke-width="2.5" fill="none" />
+        </svg>
+
+        <div class="arrow-wrap" id="arrow">
+          <svg viewBox="0 0 40 100">
+            <line x1="20" y1="20" x2="20" y2="95" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 20 5 C 10 -5, -5 20, 20 35 C 45 20, 30 -5, 20 5 Z" fill="#ff4d6d"/>
+            <path d="M 12 85 L 20 98 L 28 85" stroke="#ff4d6d" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Финальная сцена: вместо эмодзи торта вставлено изображение -->
+      <div class="cake-container" id="cakeContainer">
+        <div class="cake-graphic">
+          <div class="sparkles-wrap" id="cakeSparkles"></div>
+          <div class="balloons">
+            <span class="balloon b1">💋</span>
+            <span class="balloon b2">❤️</span>
+            <span class="balloon b3">💋</span>
+          </div>
+
+          <!-- **ИЗМЕНЕНИЕ: Вместо торта подключена ваша фотография** -->
+          <img src="photo_2026-10-19_10-09-42.jpg" alt="Фото" class="custom-photo">
+        </div>
+        <h1 class="greeting-title" id="greetingTitle">С днем рождения МАТУРЫМ!</h1>
+      </div>
+
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="shootBtn">
+        <span id="btnIcon">🏹</span> <span id="btnText">Запустить анимацию</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
